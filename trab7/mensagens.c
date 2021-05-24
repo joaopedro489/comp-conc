@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <semaphore.h>
-#include <fcntl.h>
+#include <fcntl.h> //import para a flag O_CREAT
 
 #define NTHREADS 4 //numero de threads
 
