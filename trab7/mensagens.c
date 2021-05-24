@@ -1,7 +1,9 @@
+//Arquivo para execução em mac OS
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
 #include <semaphore.h>
+#include <fcntl.h>
 
 #define NTHREADS 4 //numero de threads
 
@@ -53,6 +55,7 @@ int main(int argc, char const *argv[]) {
 	cond1 = sem_open("cond1", O_CREAT,0644, 0);
 	cond2 = sem_open("cond2", O_CREAT, 0644, 0);
 	cond3 = sem_open("cond3", O_CREAT,0644, 0);
+
 
 	/* Cria as threads */
 	pthread_create(&threads[0], NULL, mensagem4, NULL);
